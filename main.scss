@@ -1,0 +1,77 @@
+$primary-color: hsl(257, 40%, 49%);
+$white-color: white;
+$primary-font: "Poppins", sans-serif;
+$heading-font: "Open Sans", sans-serif;
+
+$body-weight: 400;
+$heading-regular: 400;
+$heading-bold: 700;
+$primary-font-size: 1.6rem;
+
+* {
+  &::after,
+  &::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  line-height: 1.5;
+  background-image: url("../images/bg-desktop.svg");
+  background-color: $primary-color;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: $white-color;
+}
+
+main {
+  padding: 2.5rem 3.5rem;
+  .logo-box {
+    padding-bottom: 4.5rem;
+    img {
+      height: 4.5rem;
+    }
+  }
+  .row__#{&} {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .#{&}__right-part {
+    height: 65vh;
+    img {
+      height: 100%;
+    }
+  }
+  .#{&}__left-part {
+    width: 50%;
+  }
+  .#{&}__heading {
+    font-size: 3.5rem;
+    font-weight: $heading-bold;
+  }
+  .#{&}__content {
+    margin: 2.5rem 0;
+  }
+  .#{&}__btn {
+    display: inline-block;
+    background-color: $white-color;
+    padding: 1.5rem 4.5rem;
+    border-radius: 4.5rem;
+    color: $primary-color;
+    text-decoration: none;
+    box-shadow: 0 0 1.5rem rgba(#000, 0.5), 0 3px 5px rgba(#000, 0.5);
+    transition: all 0.35s ease;
+    &:hover {
+      box-shadow: 0 0 15px rgba(#000, 0.7), 0 3px 5px rgba(#000, 0.7);
+    }
+  }
+}

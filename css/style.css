@@ -1,0 +1,54 @@
+*::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-image: url("../images/bg-desktop.svg");
+  background-color: #674baf;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: white; }
+
+main {
+  padding: 2.5rem 3.5rem; }
+  main .logo-box {
+    padding-bottom: 4.5rem; }
+    main .logo-box img {
+      height: 4.5rem; }
+  main .row__main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+  main .main__right-part {
+    height: 65vh; }
+    main .main__right-part img {
+      height: 100%; }
+  main .main__left-part {
+    width: 50%; }
+  main .main__heading {
+    font-size: 3.5rem;
+    font-weight: 700; }
+  main .main__content {
+    margin: 2.5rem 0; }
+  main .main__btn {
+    display: inline-block;
+    background-color: white;
+    padding: 1.5rem 4.5rem;
+    border-radius: 4.5rem;
+    color: #674baf;
+    text-decoration: none;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5), 0 3px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.35s ease; }
+    main .main__btn:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 3px 5px rgba(0, 0, 0, 0.7); }
+
+/*# sourceMappingURL=style.css.map */
