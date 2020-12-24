@@ -1,3 +1,4 @@
+// khassna nzidou fonts :
 $primary-color: hsl(257, 40%, 49%);
 $white-color: white;
 $primary-font: "Poppins", sans-serif;
@@ -8,16 +9,24 @@ $heading-regular: 400;
 $heading-bold: 700;
 $primary-font-size: 1.6rem;
 
-* {
-  &::after,
-  &::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@mixin mediaquery {
+  @media only screen and (max-width: 28.125em) {
+    @content;
   }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
+  @include mediaquery {
+    font-size: 67.5%;
+  }
 }
 body {
   font-family: $primary-font;
@@ -30,10 +39,18 @@ body {
   height: 100vh;
   overflow: hidden;
   color: $white-color;
+  @include mediaquery {
+    padding: 2.5rem;
+    height: unset;
+    overflow: unset;
+  }
 }
 
 main {
   padding: 2.5rem 3.5rem;
+  @include mediaquery {
+    padding: unset;
+  }
   .logo-box {
     padding-bottom: 4.5rem;
     img {
@@ -44,19 +61,38 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include mediaquery {
+      flex-direction: column;
+    }
   }
   .#{&}__right-part {
     height: 65vh;
+    @include mediaquery {
+      height: unset;
+    }
     img {
-      height: 100%;
+      @include mediaquery {
+        width: 90%;
+        display: block;
+        margin: 5rem auto;
+      }
     }
   }
   .#{&}__left-part {
     width: 50%;
+    @include mediaquery {
+      width: 100%;
+      text-align: center;
+      font-size: 1.7rem;
+      margin: 2rem 0;
+    }
   }
   .#{&}__heading {
     font-size: 3.5rem;
     font-weight: $heading-bold;
+    @include mediaquery {
+      font-size: 2.5rem;
+    }
   }
   .#{&}__content {
     margin: 2.5rem 0;
@@ -68,6 +104,9 @@ main {
     border-radius: 4.5rem;
     color: $primary-color;
     text-decoration: none;
+    @include mediaquery {
+      margin-top: 2rem;
+    }
     box-shadow: 0 0 1.5rem rgba(#000, 0.5), 0 3px 5px rgba(#000, 0.5);
     transition: all 0.35s ease;
     &:hover {

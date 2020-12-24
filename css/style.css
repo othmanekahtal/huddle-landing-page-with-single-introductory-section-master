@@ -1,10 +1,15 @@
-*::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 28.125em) {
+    html {
+      font-size: 67.5%; } }
 
 body {
   font-family: "Poppins", sans-serif;
@@ -17,9 +22,17 @@ body {
   height: 100vh;
   overflow: hidden;
   color: white; }
+  @media only screen and (max-width: 28.125em) {
+    body {
+      padding: 2.5rem;
+      height: unset;
+      overflow: unset; } }
 
 main {
   padding: 2.5rem 3.5rem; }
+  @media only screen and (max-width: 28.125em) {
+    main {
+      padding: unset; } }
   main .logo-box {
     padding-bottom: 4.5rem; }
     main .logo-box img {
@@ -28,15 +41,33 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-between; }
+    @media only screen and (max-width: 28.125em) {
+      main .row__main {
+        flex-direction: column; } }
   main .main__right-part {
     height: 65vh; }
-    main .main__right-part img {
-      height: 100%; }
+    @media only screen and (max-width: 28.125em) {
+      main .main__right-part {
+        height: unset; } }
+    @media only screen and (max-width: 28.125em) {
+      main .main__right-part img {
+        width: 90%;
+        display: block;
+        margin: 5rem auto; } }
   main .main__left-part {
     width: 50%; }
+    @media only screen and (max-width: 28.125em) {
+      main .main__left-part {
+        width: 100%;
+        text-align: center;
+        font-size: 1.7rem;
+        margin: 2rem 0; } }
   main .main__heading {
     font-size: 3.5rem;
     font-weight: 700; }
+    @media only screen and (max-width: 28.125em) {
+      main .main__heading {
+        font-size: 2.5rem; } }
   main .main__content {
     margin: 2.5rem 0; }
   main .main__btn {
@@ -48,6 +79,9 @@ main {
     text-decoration: none;
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5), 0 3px 5px rgba(0, 0, 0, 0.5);
     transition: all 0.35s ease; }
+    @media only screen and (max-width: 28.125em) {
+      main .main__btn {
+        margin-top: 2rem; } }
     main .main__btn:hover {
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 3px 5px rgba(0, 0, 0, 0.7); }
 
